@@ -28,16 +28,12 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 
 #top {
 	top: 0;
-	background-color: var(--turquoise);
-	height: 528px;
-	width: 430px;
 }
 
 footer {
 	background-color: var(--black);
 	color: #FFFFFF;
 }
-
 
 header {
 	display: flex;
@@ -46,7 +42,19 @@ header {
 	margin-bottom: 48px;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 /* mobile */
+
+.header-section {
+	background-color: var(--turquoise);
+	height: 528px;
+}
 
 .hamburger-menu {
 	width: 30px;
@@ -98,7 +106,6 @@ header {
 	display: none;
 }
 
-
 .top-banner {
 	display: none;
 }
@@ -126,14 +133,7 @@ header {
 	line-height: 1.6;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.section-name {
+.first-section h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;	
@@ -141,16 +141,17 @@ section {
 	margin-bottom: 20px;
 }
 
-section h2 {
-	font-family: Abril Fatface;
-	font-size: 21px;
-	font-weight: normal;
-}
 
-.primary-section-subtitle {
+.first-section h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 23px;
 	margin-bottom: 21px;
+}
+
+.first-section h2 {
+	font-family: 'Abril Fatface';
+	font-size: 21px;
+	font-weight: normal;
 }
 
 .drawing img {
@@ -159,8 +160,9 @@ section h2 {
 	margin-bottom: 50px;
 }
 
-.primary-section {
+.first-section {
 	margin-bottom: 50px;
+
 }
 
 .middle-section {
@@ -169,9 +171,8 @@ section h2 {
 }
 
 .middle-section-title {
-	font-family: Abril Fatface;
-	font-size: 28px;
-	line-height: 45px;
+	font-family: 'Abril Fatface';
+	font: normal normal normal 28px/45px 'Abril Fatface';
 	width: 341px;
 	padding-top: 60px;
 	padding-bottom: 40px;
@@ -180,7 +181,6 @@ section h2 {
 .gallery-preview { /* tutaj ma być grafika gotowa, a na to tylko  tekst i przycisk */
 	background-color: var(--turquoise);
 	height: 285px;
-	word-break: 428px;
 	justify-content: center;
 	gap: 20px;
 }
@@ -193,8 +193,55 @@ section h2 {
 
 .gallery-preview-side-text {
 	color: var(--white);
-	font-family:'Open Sans', sans-serif;
+	font: normal normal bold 25px/40px Open Sans; 
 	font-weight: bold;
-	font-size: 40px;
 	text-align: center;
+}
+
+.third-section h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;	
+	margin-top: 36px;
+	margin-bottom: 20px;
+}
+
+.third-section h2 {
+	font-family: 'Abril Fatface';
+	font: normal normal normal 28px/57px 'Abril Fatface';
+	margin-bottom: 40px;
+}
+
+.third-section p {
+	font: normal normal normal 18px/30px 'Open Sans';
+	width: 306px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+.list-counter {
+	font: normal normal normal 76px/57px 'Abril Fatface';
+	margin-right: 35px;
+	margin-top: 20px;
+}
+
+.dupa {
+	display: flex;
+}
+
+.workshop-space h1 {
+	font: normal normal bold 20px/40px Open Sans;
+	
+}
+
+.whorkshop-style-one {
+	background-color: var(--turquoise);
+	color: var(--white);
+	border-radius: 52px;
+
+}
+
+.whorkshop-style-two {
+	background-color: var(--gray);
+	border-radius: 52px;
 }
