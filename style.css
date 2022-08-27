@@ -136,6 +136,10 @@ section {
 	font: var(--font-style-2a);
 } 
 
+.bacground-box-2 h4 {
+	margin-bottom: 0px;
+}
+
 .subject {
 	font: var(--font-style-1c);
 	margin-bottom: 20px;
@@ -234,6 +238,10 @@ section {
 	font: var(--font-style-2c); 
 	margin-right: 35px;
 	margin-top: 20px;
+}
+
+.counter-one {
+	margin-right: 43px;
 }
 
 .list-counter-position {
@@ -414,8 +422,6 @@ section {
 	margin: 0px 0px 44px 0px;
 }
 
-
-
 @media (max-width: 430px) {
 
 	.part-logo2 {
@@ -427,7 +433,6 @@ section {
 		height: 70%;
 	}
 }
-
 
 
 /* gallery desktop*/
@@ -481,36 +486,56 @@ section {
 
 /* desktop */
 
-.nav-desktop-container {
-	font: var(--font-style-1i);
-	text-transform: uppercase;
-	color: var(--white);
-	margin: 71px 174px 0px 100px;
+@media (min-width: 1199px) {
+
+	.hamburger-menu {
+		display: none;
+	}
+
+	.nav-desktop-container {
+		font: var(--font-style-1i);
+		text-transform: uppercase;
+		color: var(--white);
+		margin: 71px 174px 0px 100px;
+	}
+
+	.menu-list li:hover {
+		border-bottom: solid 5px #FCBA00;	
+	}
+
+	.desktop-view {
+		display: flex;
+		flex-basis: auto;
+		justify-content: space-between;
+	}
+
+	.menu-list {
+		display: flex;
+		gap: 25px;
+	}
+
+	.menu-list li {
+
+		padding: 0px 6px 5px 6px;
+		white-space: nowrap;
+	}
+
+	.logo-desktop {
+		margin: 46px 0px 0px 267px;
+	}
+
+	.top-drawing {
+		display: block;
+	}
+
+	.top-banner {
+		display: flex;
+		justify-content: space-around;
+
+	}
 }
 
-.menu-list li:hover {
-	border-bottom: solid 5px #FCBA00;	
-}
 
-.desktop-view {
-	display: flex;
-	flex-basis: auto;
-	justify-content: space-between;
-}
-
-.menu-list {
-	display: flex;
-	gap: 25px;
-}
-
-.menu-list li {
-	padding: 0px 6px 5px 6px;
-	white-space: nowrap;
-}
-
-.logo-desktop {
-	margin: 46px 0px 0px 267px;
-}
 
 
 
