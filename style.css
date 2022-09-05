@@ -6,13 +6,9 @@
 							/* gallery */
 
 /* reset */
-a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,input,ins,kbd,label,legend,li,mark,menu,,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,textarea,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:100%;font-weight:inherit;font-style:inherit}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary,video{display:block;}audio,canvas{display:inline-block}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}ol,ul{list-style:none}a,del,ins{text-decoration:none}a:active,a:hover{outline:0}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}img{border:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input,textarea{background:0 0}button,input{line-height:normal}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type=search]{-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}a button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto}table{border-collapse:collapse;border-spacing:0}caption,th{text-align:left}q:after,q:before{content:''}
+a{all: unset},abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,input,ins,kbd,label,legend,li,mark,menu,,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,textarea,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:100%;font-weight:inherit;font-style:inherit}article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary,video{display:block;}audio,canvas{display:inline-block}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}ol,ul{list-style:none}a,del,ins{text-decoration:none}a:active,a:hover{outline:0}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}img{border:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input,textarea{background:0 0}button,input{line-height:normal}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type=search]{-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}a button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto}table{border-collapse:collapse;border-spacing:0}caption,th{text-align:left}q:after,q:before{content:''}
 
 /* fonts */
-
-@font-face {
-	font-family: 'Abril Fatface';
-}
 
 :root {
 	--font-style-1: normal normal bold 35px/44px 'Azo-sans-web'; 
@@ -25,11 +21,11 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	--font-style-1g: normal normal bold 28px/30px 'Azo-sans-web';
 	--font-style-1h: italic normal normal 18px/30px 'Azo-sans-web';
 	--font-style-1i: normal normal bold 20px/25px 'Azo-sans-web';
-	--font-style-1j: normal normal bold 50px/68px Open Sans;
-	--font-style-2a: normal normal normal 28px/45px 'Abril Fatface';
-	--font-style-2b: normal normal normal 34px/57px 'Abril Fatface';
-	--font-style-2c: normal normal normal 76px/57px 'Abril Fatface'; 
-	--font-style-2d: normal normal normal 21px/28px 'Abril Fatface';
+	--font-style-1j: normal normal bold 50px/68px 'Azo-sans-web';
+	--font-style-2a: normal normal normal 28px/45px 'Abril-Fatface';
+	--font-style-2b: normal normal normal 34px/57px 'Abril-Fatface';
+	--font-style-2c: normal normal normal 76px/57px 'Abril-Fatface'; 
+	--font-style-2d: normal normal normal 21px/28px 'Abril-Fatface';
 }
 
 
@@ -50,6 +46,10 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .section-container {
     display: flex;
     flex-direction: column;
@@ -60,13 +60,33 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 
 /* mobile */
 
-.header-mobile {
-	display: flex;
+.header {
 	margin-bottom: 48px;
+	display: flex;
 	justify-content: space-between;
 }
 
+.menu {
+		margin: 71px 0px 0px 100px;
+		font: var(--font-style-1b);
+		text-transform: uppercase;
+		color: var(--white); 
+		font:var(--font-style-1b);
+}
+
+.menu li:hover {
+	border-bottom: solid 1px #FCBA00;	
+	cursor: pointer;
+}
+
+.dropdown-menu {
+	display: none;
+	background-color: var(--turquoise);
+}
+
+
 .hamburger-menu {
+	
 	width: 30px;
 	height: 30px;
 	margin-top: 46px;
@@ -77,6 +97,7 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	justify-content: space-around;
 	float: right;
 }
+
 
 .line {
 	width: 100%;
@@ -105,13 +126,6 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	margin:46px 0px 0px 59px;
 }
 
-.dropdown-menu {
-	text-transform: uppercase;
-	font: var(--font-style-1b);
-	color: var(--white);
-	background-color: var(--turquoise);
-	display: none;
-}
 
 .top-drawing {
 	display: none;
@@ -122,10 +136,11 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	margin: 0px 58px 60px 59px;
 }
 
-.facebook {
+.facebook-top {
 	width: 49px;
 	height: 49px;
-	margin-left: 59px; 
+	margin-left: 59px;
+	cursor: pointer;
 }
 
 .intro {
@@ -155,7 +170,7 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	margin-bottom: 50px;
 }
 
-.background-box-1 {
+.hero-container {
 	background-color: var(--turquoise);
 	margin-bottom: 29px;
 	padding-bottom: 50px;
@@ -199,10 +214,6 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-.horizontal-layout  {
-	max-width:1800px;
 }
 
 .reviews-line {
@@ -428,7 +439,6 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 	background-repeat: no-repeat;
 }
 
-
 .footer-content {
 	background-color: var(--black);
 	color: var(--white);
@@ -462,89 +472,35 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 }
 
 
-/* gallery desktop*/
- 
-.gallery-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 51px;
-}
-
-.img-wrapper:hover::after {
-	content: "zobacz";
-	display: block;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(34, 164, 186, 0.5);
-	color: var(--white);
-	text-transform: uppercase;
-	font: var(--font-style-1i);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	line-height: 260px;	
-}
-
-.img-wrapper {
-	position: relative;
-}
- 
-.gallery-decoration-aligment {
-	display: flex;
-}
-
-.gallery-dots {
-	margin-top: 60px;
-}
-
-.gallery-footer {
-	display: flex;
-	gap: 80px;
-}
-
-.footer-content-gallery {
-	display: flex;
-	justify-content: space-between;
-	padding-left: 281px;
-	padding-right: 281px;
-}
-
-
 /* desktop */
 
-@media (min-width: 1499px) {
+@media (min-width: 1000px) {
 
 	.hamburger-menu {
 		display: none;
 	}
 
-	.nav-desktop-container {
-		font: var(--font-style-1i);
-		text-transform: uppercase;
-		color: var(--white);
-		margin: 71px 174px 0px 100px;
+	.dropdown-menu {
+		display: block;
 	}
 
-	.menu-list li:hover {
-		border-bottom: solid 5px #FCBA00;	
-	}
-
-	.desktop-view {
-		display: flex;
-		flex-basis: auto;
-		justify-content: space-between;
-	}
-
-	.menu-list {
+	.desktop-menu {
 		display: flex;
 		gap: 25px;
 	}
 
-	.menu-list li {
-
+	.desktop-menu li {
 		padding: 0px 6px 5px 6px;
 		white-space: nowrap;
+	}
+
+	.desktop-menu li:hover {
+		border-bottom: solid 5px #FCBA00;	
+		cursor: pointer;
+	}
+
+	.header {
+		margin-bottom:120px;
 	}
 
 	.logo-desktop {
@@ -553,27 +509,29 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 
 	.top-drawing {
 		display: block;
-		margin-right: 225px;
 	}
 
 	.top-banner {
 		display: flex;
-		justify-content: space-between;;
+		gap: 200px;;;
 	}
 
 	.go-to-events-btn {
 		display: block;
-		border: 3px solid white;
+		border-style: none;
+		background-color: var(--orange); 
+		color: var(--white);
 		border-radius: 10px;
 		text-transform: uppercase;
 		font: var(--font-style-1b);
-		font-style: 20px;
 		margin: 50px 0px 0px 59px;
+		padding: 7px 20px 7px 20px;
 	}
 
-	.go-to-events-btn a {
-		color: var(--white); 
-		padding: 10px;
+	.go-to-events-btn:hover {
+		border-style: solid;
+		border-color: white;
+		background-color: var(--turquoise);
 	}
 
 	.hero {
@@ -581,12 +539,9 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 		margin-bottom: 0px;  
 	}
 
-	.background-box-1 {
-		padding: 0px 90px 50px 200px;
-	}
-
-	.header-desktop {
-		margin-bottom:120px;
+	.hero-container {
+		display: flex;
+		justify-content: center;
 	}
 
 	.logo-desktop {
@@ -668,6 +623,13 @@ a,abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,
 
 }
 
+@media(max-width: 800px){
+	.hide {
+		display: block;
+
+	}
+
+}
 
 
 

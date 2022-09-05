@@ -4,44 +4,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<meta charset="UTF-8"> 
 		<title>Czuły wojownik</title>
-		<!-- <link rel="stylesheet" href="https://use.typekit.net/zfk3jlb.css">  -->
-		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-		<!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@300;600&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"> -->
-		<link rel="stylesheet" href="style.css">
+		 <link rel="stylesheet" href="https://use.typekit.net/zfk3jlb.css">
+		 <link rel="preconnect" href="https://fonts.googleapis.com"> 
+		 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		 <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="horizontal-layout">
-			<div class="background-box-1 horizontal-layout" id="top">
-				<header class="header-mobile header-desktop">
-					<h1><img class= "logo-mobile logo-desktop" src="assets/logo.png" alt=" "><h1>
-					<nav class="nav-content change nav-desktop-container">
-						<ul class="dropdown-menu menu-list">
-							<li>idea</li>  
-							<li>oferta</li> 
-							<li>galeria</li>
-							<li>o nas</li>
-							<li>kontakt</li>
-						</ul>
+		<div class="hero-container">
+			<div id="top">
+				<header class="header">
+					<div><h1><img class= "logo-mobile logo-desktop" src="assets/logo.png" alt=" "><h1></div>
+				<nav class="menu">
+						<ul class="dropdown-menu desktop-menu">
+							<a href="#a-idea"><li>idea</li></a>
+							<a href="#a-oferta"><li>oferta</li></a>
+							<a href="#a-galeria"><li>galeria</li></a>
+							<a href="#a-wydarzenia"><li>wydarzenia</li></a>
+							<a href="#a-o-nas"><li>o nas</li></a>
+							<a href="#a-kontakt"><li>kontakt</li></a>
+						</ul>	
 					</nav>
 						<div class="hamburger-menu">
 							<div class="line line-1"></div>
 							<div class="line line-2"></div>
 							<div class="line line-3"></div>
 						</div>
+						
 				</header>
 				<div class="top-banner">
 					<div>
 						<h2 class="hero">Bezpieczna przestrzeń<br>doświadczania męskiej<br>wrażliwości i mocy<h2>
 						<button class="go-to-events-btn"><a href="" target="blank">zobacz wydarzenia</button>
 					</div>
-					<figure><img class="top-drawing" src="assets/grafika_topbanner.png"></figure>
+						<div class="top-drawing">
+							<figure><img  src="assets/grafika_topbanner.png"></figure>
+						</div>
+					</div>
+					<a href="https://www.facebook.com/czulywojownik/" target="blank"><img class="facebook-top" src="assets/fb_button.png"></a>
 				</div>
-				<a href="https://www.facebook.com/czulywojownik/" target="blank"><img class="facebook" src="assets/fb_button.png"></a>
 			</div>
-		</div>
-		<section class="background-box-2 section-container">
-			<h3 class="nav-element">idea</h3>
+			<a id="a-idea"><section class="background-box-2 section-container"></a>
+			<h3 class="nav-element">idea</h3></a>
 			<h4 class="intro">Na czym opieramy nasze warsztaty</h4>
 			<div class="box-2-desktop">
 				<div class="box-2-desktop-content">
@@ -67,12 +70,11 @@
 				</div>
 			</div>
 		</section>
-		<section class="background-box-3 section-container ">
+		<a id="a-galeria"><section class="background-box-3 section-container"></a>
 			<blockquote class="quote">Chcemy zaprosić Was do zatrzymania się i sprawdzenia tego, co się z Wami dzieje, żebyście mogli lepiej zadbać o Wasze potrzeby.</blockquote>
 			<div class="section-content">Podsumowując, zapraszamy na spotkanie mężczyzn szukających doświadczenia męskiej wspólnoty, na którym można uczyć się rozpoznawać i wyrażać to, co się z nami dzieje. Dzięki odwadze odsłonięcia swojej wrażliwości, będzie można pogłębiać relacje z samymi sobą. To zaś otworzy nam dostęp do wewnętrznej siły, której można użyć, by lepiej dbać o jakość własnego życia.</div>
 		</section>
-
-		<section class="gallery-preview-mobile section-container ">
+		<section class="gallery-preview-mobile section-container">
 			<button class="gallery-preview-button"><img src="assets/gallery.png"></button>
 			<div class="gallery-preview-side-text">PRZEJDŹ DO GALERII</div>
 		</section>
@@ -85,7 +87,7 @@
 				<a><img src="img/galeria_963x641-5.jpg"></a>
 			</div>
 		</section>
-		<section class="background-box-4 section-container">
+		<a id="a-oferta"><section class="background-box-4 section-container"></a>
 			<h3 class="nav-element">oferta</h3>
 			<h4 class="intro">Proponujemy 4 formy sotkań</h4>
 			<div class="list-counter-desktop">
@@ -111,8 +113,8 @@
 			</div>
 			</div>
 		</section>
-		<section class="background-box-5 section-container ">
-				<h3 class="nav-element">oferta</h3>
+		<a id="a-wydarzenia"><section class="background-box-5 section-container"></a>
+				<h3 class="nav-element">wydarzenia</h3>
 				<h4 class="intro">Sprawdź nadchodzące wydarzenia</h4>
 				<div class="workshop-space whorkshop-style-turquoise">
 					<div class="workshop-title">1. Czuły wojownik - warsztat<br>rozwojowy dla mężczyzn.</div>
@@ -130,11 +132,10 @@
 					<button class="toggle-btn">więcej</button>
 					<div class="price block">inwestycja<br>1000 PLN</div>
 					<div class="data block">najbliższy termin<br><data>09.10.2022</data> <!-- nie ma takiego tagu misiu --></div>
-
 					<a target="blank" href="https://docs.google.com/forms/d/e/1FAIpQLScdxxz0pSVNkoaLUQnwzwI6o_m5jI6e2upr6Ct9V-GyX2aL_A/viewform?usp=sf_link" width="640" height="1491" frameborder="0" marginheight="0" marginwidth="0"><button class="register-btn btn-style2">zapisz się</button></a>
 				</div>
 		</section>	
-		<section class="about section-container about-background">
+		<a id="a-o-nas"><section class="about section-container about-background"></a>
 			<h3 class="nav-element">o nas</h3>
 			<h4 class="intro">Kilka słów o prowadzących warsztaty</h4>
 			<div class="guys-photos">
@@ -151,7 +152,7 @@
 		<section class="reviews-section">
 			<h3 class="nav-element">opinie</h3>
 			<h4 class="intro">Uczestnicy o warsztatach</h4>
-			<div class="horizontal-layout">
+			<div class="section-max-width-container">
 				<div class="reviews-line">
 					<div class="reviews"><em>„Warsztaty pozwoliły mi lepiej zrozumieć swoje emocje, Oraz spowodowały że mam lepszy kontakt z dziećmi.„</em><br><br>Rafał, 28 lat, mąż, ojciec i przedsiębiorca</div>
 					<div class="reviews"><em>„Dotychczas nie zdawałem sobie sprawy z potencjału jaki może dać zrozumienie i zaakceptowanie trudnych emocji”</em><br><br>Kamil, 35 lat, freelancer</div>
@@ -173,11 +174,11 @@
 				<button>odrzuć</button>
 			</div>
 		</div>
-		<footer class="footer-content">
+		<a id="a-kontakt"><footer class="footer-content"></a>
 			<div class="contact">Jakub Macewicz<br><br>T: 501 265 440<br>E: kuba@czulywojownik.pl</div>
 			<div class="contact">Jan Panasiuk<br><br>T: 575 044 855<br>E: janek@czulywojownik.pl</div>
 			<div class="copywright">© Jakub Macewicz</div>
-			<a href="https://www.facebook.com/czulywojownik/"><img src="assets/fb_button.png"></a>
+			<a href="https://www.facebook.com/czulywojownik/"><img class="facebook" src="assets/fb_button.png"></a>
 		</footer>
 		<script src="app.js"></script>
 	</body>
