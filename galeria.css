@@ -8,10 +8,9 @@
 
 .img-wrapper:hover::after {
 	content: "zobacz";
-	display: block;
-	text-align: center;
-	width: 100%;
-	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: rgba(34, 164, 186, 0.5);
 	color: var(--white);
 	text-transform: uppercase;
@@ -19,11 +18,19 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	line-height: 260px;	
+	right: 0;
+	left: 0;
+	cursor: pointer;
 }
 
 .img-wrapper {
+	width: 200px;
 	position: relative;
+}
+
+.img-wrapper img {
+	width: 100%;
+	height: auto;
 }
  
 .gallery-decoration-aligment {
@@ -44,4 +51,31 @@
 	justify-content: space-between;
 	padding-left: 281px;
 	padding-right: 281px;
+}
+
+
+/* overlay */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.overlay-active .overlay {
+	display: flex;
+}
+
+.overlay img {
+	width: 50%;
+	height: auto;
+	border: 3px solid #fff;
 }
