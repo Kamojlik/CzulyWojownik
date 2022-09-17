@@ -1,0 +1,45 @@
+.workshop-container {
+	background-color: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url("assets/kropki_w_tle1.png");
+	background-repeat: no-repeat;
+	background-position: top 0px left 60px;
+}
+
+.workshop-holder {
+	display:flex;
+	text-transform: uppercase;
+	font: var(--font-style-1b);
+	margin: 50px 24px 20px 24px;
+	padding: 30px;
+	background-color: var(--turquoise);
+	color: var(--white);
+	border-radius: 80px;
+	justify-content: space-between;
+}
+
+.workshop-toggle-btn {
+	border-style: none;
+	text-transform: uppercase;
+	font: var(--font-style-1b);
+	font-style: 20px;
+	color: var(--white);
+}
+
+.events-container {
+	background-color: var(--light-gray);
+	text-align: center;
+}
+
+@media (min-width: 1199px); {
+
+	.workshop-holder {
+
+		max-width: 1200px;	
+	}
+}
+
+

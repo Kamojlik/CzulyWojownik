@@ -21,16 +21,8 @@ hamburgerMenu.addEventListener('click', toggleMenu);
 function toggleMenu() {
 	hamburgerMenu.classList.toggle('change');
 	dropdownMenu.classList.toggle('hide');
+	document.querySelector('html').classList.toggle('menu-active');
 }
 	
 	
-
 	
-	 	//let hamburgerMenu = document.querySelector('.hamburger-menu');
-
-		//hamburgerMenu.addEventListener('click', toggleMenu);
-
-		//function toggleMenu() {
-			//document.querySelector('html').classList.toggle('menu-active');
-		//}
-	 
