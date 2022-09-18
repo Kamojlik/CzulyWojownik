@@ -3,22 +3,22 @@ abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,co
 
 /* fonts */
 :root {
-	--font-style-1: normal normal bold 35px/44px 'Azo-sans-web'; 
-	--font-style-1a: normal normal normal 18px/30px 'Azo-sans-web';
-	--font-style-1b: normal normal bold 20px/40px 'Azo-sans-web';
-	--font-style-1c: normal normal bold 23px/29px 'Azo-sans-web';
-	--font-style-1d: normal normal bold 24px/57px 'Azo-sans-web';
-	--font-style-1e: normal normal bold 25px/40px 'Azo-sans-web';
-	--font-style-1f: normal normal normal 20px/40px 'Azo-sans-web';
-	--font-style-1g: normal normal bold 28px/30px 'Azo-sans-web';
-	--font-style-1h: italic normal normal 18px/30px 'Azo-sans-web';
-	--font-style-1i: normal normal bold 20px/25px 'Azo-sans-web';
-	--font-style-1j: normal normal bold 50px/68px 'Azo-sans-web';
-	--font-style-1k: normal normal bold 18px/30px 'Azo-sans-web';
-	--font-style-2a: normal normal normal 28px/45px 'Abril-Fatface';
-	--font-style-2b: normal normal normal 34px/57px 'Abril-Fatface';
-	--font-style-2c: normal normal normal 76px/57px 'Abril-Fatface'; 
-	--font-style-2d: normal normal normal 21px/28px 'Abril-Fatface';
+	--font-style-1: normal normal bold 35px/44px 'azo-sans-web'; 
+	--font-style-1a: normal normal normal 18px/30px 'azo-sans-web';
+	--font-style-1b: normal normal bold 20px/40px 'azo-sans-web';
+	--font-style-1c: normal normal bold 23px/29px 'azo-sans-web';
+	--font-style-1d: normal normal bold 24px/57px 'azo-sans-web';
+	--font-style-1e: normal normal bold 25px/40px 'azo-sans-web';
+	--font-style-1f: normal normal normal 20px/40px 'azo-sans-web';
+	--font-style-1g: normal normal bold 28px/30px 'azo-sans-web';
+	--font-style-1h: italic normal normal 18px/30px 'azo-sans-web';
+	--font-style-1i: normal normal bold 20px/25px 'azo-sans-web';
+	--font-style-1j: normal normal bold 50px/68px 'azo-sans-web';
+	--font-style-1k: normal normal bold 18px/30px 'azo-sans-web';
+	--font-style-2a: normal normal normal 28px/45px 'abril-fatface';
+	--font-style-2b: normal normal normal 34px/57px 'abril-fatface';
+	--font-style-2c: normal normal normal 76px/57px 'abril-fatface'; 
+	--font-style-2d: normal normal normal 21px/28px 'abril-fatface';
 }
 
 /* colors */
@@ -760,13 +760,24 @@ a {
 	padding: 20px 30px;
 }
 
-/*.workshop-toggle-btn {
-	border-style: none;
-	text-transform: uppercase;
-	font: var(--font-style-1b);
-	font-style: 20px;
-	color: var(--white);
-}*/
+.workshop-zaawansowany .workshop-holder{
+	background-color: #D8D8D8;
+	color: black;
+}
+
+.workshop-zaawansowany .workshop-holder button {
+	color: black;
+}
+
+.workshop-interpersonalny .workshop-holder{
+	background-color: var(--orange);
+	color: black;
+}
+
+.workshop-interpersonalny .workshop-holder button {
+	color: black;
+}
+
 
 .events-container {
 	padding-bottom: 100px;

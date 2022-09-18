@@ -9,7 +9,7 @@ images.forEach(function(image){
 	});
 });
 
-document.querySelector('.gallery-close').addEventListener('click', function(){
+document.querySelector('.gallery-close')?.addEventListener('click', function(){
 	document.querySelector('html').classList.remove('overlay-active');
 });
 
@@ -50,5 +50,6 @@ hideDetailsBtn.forEach(function(button){
 function toggleContent(button) {
 	button.closest('.workshop-container').querySelector('.show-details-container').classList.toggle('show');
 }
+
 
 
