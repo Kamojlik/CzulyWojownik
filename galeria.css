@@ -1,9 +1,25 @@
 /* gallery desktop*/
  
+.gallery-decoration-aligment {
+	background-image: url("assets/kropki_w_tle1.png"), url("assets/Group 174.png");
+	background-repeat: no-repeat;
+	background-position: top 40px left, top 200px left;
+}
+
+@media (max-width: 800px){
+	.gallery-decoration-aligment {
+		background: none;
+	}
+}
+
 .gallery-container {
+	max-width: 1600px;
+	margin-inline: auto;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 51px;
+	margin-top: 50px;
 }
 
 .img-wrapper:hover::after {
@@ -24,21 +40,14 @@
 }
 
 .img-wrapper {
-	width: 200px;
+	max-width: 300px;
 	position: relative;
 }
 
 .img-wrapper img {
 	width: 100%;
 	height: auto;
-}
- 
-.gallery-decoration-aligment {
-	display: flex;
-}
-
-.gallery-dots {
-	margin-top: 60px;
+	display: block;
 }
 
 .gallery-footer {
@@ -75,7 +84,32 @@
 }
 
 .overlay img {
-	width: 50%;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	border: 3px solid #fff;
+}
+
+.gallery-overlay-container {
+	max-width: 50%;
+	max-height: 80vh;
+	position: relative;
+}
+
+.gallery-close {
+	width: 34px;
+	height: 34px;
+
+	position: absolute;
+	right: 20px;
+	top: 20px;
+
+	border: 0;
+
+	background-image: url('assets/x_white.png');
+}
+
+.sr-only {
+	position: absolute;
+	top: -100vh;
+	left: -100vw;
 }
