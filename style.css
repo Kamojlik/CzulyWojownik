@@ -74,7 +74,7 @@ a {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 1;;
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
 }
@@ -84,9 +84,11 @@ a {
 		height: 80%;
 		width: 80%;
 	}	
-
-
+	.header-main .sticky-top {
+		margin: 20px;
+	}
 }
+
 .nav-main {
 	font: var(--font-style-1i);
 	text-transform: uppercase;
@@ -167,7 +169,8 @@ a {
 
 }
 
-.facebook {padding: 50px 0px 52px 58px; 
+.facebook {
+	padding: 50px 0px 52px 58px; 
 }
 
 

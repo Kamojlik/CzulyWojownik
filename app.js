@@ -26,8 +26,18 @@ function toggleMenu() {
 	dropdownMenu.classList.toggle('hide');
 	document.querySelector('html').classList.toggle('menu-active');
 }
-	
-	
+
+// closing dropdown 
+let dropdownMenuItem = document.querySelector('.menu-item');
+
+dropdownMenuItem.addEventListener('click', hideMenu);
+
+function hideMenu() {
+	document.querySelector('html').classList.remove('menu-active');
+	document.querySelector('.dropdown-menu').classList.remove('hide');
+	document.querySelector('.hamburger-menu').classList.remove('change');
+}
+		
 // show workshop details
 
 let showDetailsBtn = document.querySelectorAll('.show-details-btn');	
