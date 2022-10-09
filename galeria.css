@@ -6,7 +6,7 @@
 	background-position: top 40px left, top 200px left;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
 	.gallery-decoration-aligment {
 		background: none;
 	}
@@ -50,19 +50,6 @@
 	display: block;
 }
 
-.gallery-footer {
-	display: flex;
-	gap: 80px;
-}
-
-.footer-content-gallery {
-	display: flex;
-	justify-content: space-between;
-	padding-left: 281px;
-	padding-right: 281px;
-}
-
-
 /* overlay */
 .overlay {
 	position: fixed;
@@ -98,13 +85,10 @@
 .gallery-close {
 	width: 34px;
 	height: 34px;
-
 	position: absolute;
 	right: 20px;
 	top: 20px;
-
 	border: 0;
-
 	background-image: url('assets/x_white.png');
 }
 

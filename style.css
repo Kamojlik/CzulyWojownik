@@ -89,6 +89,7 @@ a {
 	}
 }
 
+
 .nav-main {
 	font: var(--font-style-1i);
 	text-transform: uppercase;
@@ -158,9 +159,7 @@ a {
 	right: 0;
 }
 
-.top-drawing {
-	display: none;
-}
+
 
 .hero {
 	font: var(--font-style-1);
@@ -451,7 +450,7 @@ a {
 }
 
 .contact-details {
-	margin: 0px 0px 44px 0px;
+	margin:0px 0px 44px 0px;
 }
 
 .gallery-preview-desktop {
@@ -521,30 +520,28 @@ a {
 
 @media (min-width: 1279px) {
 
-	.footer-content {
-		display: flex;
-		flex-direction: column;
-	} 
-
-	.footer-content div {
-		display: flex;
-	}
-
-	.footer-content {
-		justify-content: space-between;
-		padding-right: 300px;
-		padding-left: 300px;
-	}
-
 	.contact-details {
-		margin-right: 150px;
+		margin-right:150px;
 	}
 
 	.copywright {
+		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 
+	.footer {
+		display: flex;
+		padding-left: 10%;
+	}
+}
+
+@media (max-width: 1099px) {
+	
+	.top-drawing {
+		display: none;
 	}
 }
 
@@ -619,8 +616,8 @@ a {
 	}
 
 	.facebook {
-    cursor: pointer;
-    padding: 10px 0px 90px 0px;
+   	 	cursor: pointer;
+   		 padding: 10px 0px 90px 0px;
 	}
 
 	.box-2-desktop {
