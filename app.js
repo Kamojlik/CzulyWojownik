@@ -14,7 +14,6 @@ document.querySelector('.gallery-close')?.addEventListener('click', function(){
 });
 
 
-
 // hamburger
 let hamburgerMenu = document.querySelector('.hamburger-menu');
 let dropdownMenu = document.querySelector('.dropdown-menu');
@@ -28,15 +27,17 @@ function toggleMenu() {
 }
 
 // closing dropdown 
-let dropdownMenuItem = document.querySelector('.menu-item');
+let dropdownMenuItem = document.querySelectorAll('.menu-item');
 
-dropdownMenuItem.addEventListener('click', hideMenu);
+	dropdownMenuItem.forEach(function(item){
 
-function hideMenu() {
-	document.querySelector('html').classList.remove('menu-active');
-	document.querySelector('.dropdown-menu').classList.remove('hide');
-	document.querySelector('.hamburger-menu').classList.remove('change');
-}
+		item.addEventListener('click', function(event){
+			document.querySelector('html').classList.remove('menu-active');
+			document.querySelector('.dropdown-menu').classList.remove('hide');
+			document.querySelector('.hamburger-menu').classList.remove('change');
+		});
+	});
+
 		
 // show workshop details
 

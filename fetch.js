@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				workshop.querySelector('.workshop-date').textContent = row['Data'];
 				workshop.querySelector('.workshop-link').href = row['Link'];
 
-				
 			});
 		});
-
 });
