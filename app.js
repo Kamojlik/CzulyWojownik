@@ -1,4 +1,4 @@
-// overlay
+// gallery overlay
 let images = document.querySelectorAll('.img-wrapper');
 let overlayImg = document.querySelector('.overlay img');
 
@@ -14,7 +14,7 @@ document.querySelector('.gallery-close')?.addEventListener('click', function(){
 });
 
 
-// hamburger
+// hamburger menu
 let hamburgerMenu = document.querySelector('.hamburger-menu');
 let dropdownMenu = document.querySelector('.dropdown-menu');
 
@@ -39,24 +39,22 @@ let dropdownMenuItem = document.querySelectorAll('.menu-item');
 	});
 
 		
-// show workshop details
-
+// open, close workshop 
 let showDetailsBtn = document.querySelectorAll('.show-details-btn');	
 let showDetailsContainer = document.querySelector('.show-details-container');
 let hideDetailsBtn = document.querySelectorAll('.hide-details-btn');
 
 showDetailsBtn.forEach(function(button){
-	button.addEventListener('click', function(event){
+	document.addEventListener('click', function(event){
 		toggleContent(event.target);
 	});
 })
 
 hideDetailsBtn.forEach(function(button){
-	button.addEventListener('click', function(event){
+	document.addEventListener('click', function(event){
 		toggleContent(event.target);
 	});
 })
-
 
 function toggleContent(button) {
 	button.closest('.workshop-container').querySelector('.show-details-container').classList.toggle('show');

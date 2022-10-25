@@ -19,24 +19,35 @@ document.addEventListener('DOMContentLoaded', () => {
 			// log the JSON to console for testing
 			console.log(data);
 
-// for each row in the sheet
-			data.forEach((row) => {
 
-				let workshop = '';
+// for each row in the sheet
+
+			let typeRozwojowy = document.querySelector('.rozwojowy');
+			let typeRelacje = document.querySelector('.relacje');
+			let typeInter = document.querySelector('.interpersonalny');
+			let typeMeskiKrag = document.querySelector('.meski-krag');
+			let template = document.querySelector('template');
+			
+			let container = document.querySelector('.container');
+
+			data.forEach((row) => {
+				let copy;
+				console.log(row);
 
 				if(row['Typ'] === 'Rozwojowy'){
-					workshop = document.querySelector('.workshop-rozwojowy');
-				}
-				if(row['Typ'] === 'Zaawansowany'){
-					workshop = document.querySelector('.workshop-zaawansowany');
-				}
-				if(row['Typ'] === 'Interpersonalny'){
-					workshop = document.querySelector('.workshop-interpersonalny');
-				}
+					copy = typeRozwojowy.content.cloneNode(true);
+						console.log('nie');
+				};
 
-				workshop.querySelector('.workshop-date').textContent = row['Data'];
-				workshop.querySelector('.workshop-link').href = row['Link'];
-
+				// add the data from JSON to the template
+				copy.querySelector('.workshop-title').textContent = row['Typ'];
+				copy.querySelector('.workshop-date').textContent = row['Data'];
+				copy.querySelector('.price').textContent = row['Cena'];
+				copy.querySelector('.workshop-link').textContent = row['Link'];
+			
+				// place the copy filled with data in the right place in HTML
+				container.appendChild(copy);
+				console.log(container);
 			});
 		});
 });
