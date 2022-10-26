@@ -856,6 +856,8 @@ a {
 }
 
 
-
+.dupa {
+	pointer-events: none;
+}
 
 

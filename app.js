@@ -44,17 +44,19 @@ let showDetailsBtn = document.querySelectorAll('.show-details-btn');
 let showDetailsContainer = document.querySelector('.show-details-container');
 let hideDetailsBtn = document.querySelectorAll('.hide-details-btn');
 
-showDetailsBtn.forEach(function(button){
 	document.addEventListener('click', function(event){
-		toggleContent(event.target);
-	});
-})
 
-hideDetailsBtn.forEach(function(button){
-	document.addEventListener('click', function(event){
-		toggleContent(event.target);
+		if(event.target.matches('.show-details-btn') || event.target.matches('.hide-details-btn') ){
+			toggleContent(event.target);
+		};
+		 
 	});
-})
+
+// /hideDetailsBtn.forEach(function(button){
+// 	document.addEventListener('click', function(event){
+// 		toggleContent(event.target);
+// 	});
+// })
 
 function toggleContent(button) {
 	button.closest('.workshop-container').querySelector('.show-details-container').classList.toggle('show');

@@ -32,18 +32,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			data.forEach((row) => {
 				let copy;
-				console.log(row);
 
 				if(row['Typ'] === 'Rozwojowy'){
-					copy = typeRozwojowy.content.cloneNode(true);
-						console.log('nie');
+					copy = typeRozwojowy.content.cloneNode(true);		
+				};
+
+				if(row['Typ'] === 'Relacje'){
+					copy = typeRelacje.content.cloneNode(true);		
+				};
+
+				if(row['Typ'] === 'Interpersonalny'){
+					copy = typeInter.content.cloneNode(true);		
+				};
+
+				if(row['Typ'] === 'Meski Krag'){
+					copy = typeMeskiKrag.content.cloneNode(true);		
 				};
 
 				// add the data from JSON to the template
-				copy.querySelector('.workshop-title').textContent = row['Typ'];
+				copy.querySelector('.workshop-title').textContent = row['Nazwa'];
 				copy.querySelector('.workshop-date').textContent = row['Data'];
 				copy.querySelector('.price').textContent = row['Cena'];
-				copy.querySelector('.workshop-link').textContent = row['Link'];
+				copy.querySelector('.workshop-link').href = row['Link'];
 			
 				// place the copy filled with data in the right place in HTML
 				container.appendChild(copy);
