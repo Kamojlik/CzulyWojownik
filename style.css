@@ -83,12 +83,7 @@ a {
 	.logo {
 		height: 80%;
 		width: 80%;
-		margin-left: 20px;
 	}	
-
-	.hamburger-menu {
-		margin-right: 20px;
-	}
 }
 
 
@@ -137,6 +132,7 @@ a {
 	width: 50px;
 	display: flex;
 	border-style: none;
+	flex-shrink: 0;
 }
 
 .line {
@@ -531,10 +527,9 @@ a {
 @media (max-width: 399px) {
 	.sticky-top {
 		justify-content: center;
-		gap: 20px;
 		margin: 10px;
 	}
-}
+} 
 
 .footer-content .facebook {
 	background-color: inherit;
