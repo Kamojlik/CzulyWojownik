@@ -18,8 +18,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 51px;
+	gap: 30px;
 	margin-top: 50px;
+}
+
+@media (max-width: 1279px) {
+	.gallery-container {
+		gap: 10px;
+	}
+
 }
 
 .img-wrapper:hover::after {
@@ -58,11 +65,9 @@
 	right: 0;
 	bottom: 0;
 	z-index: 10;
-
 	display: none;
 	justify-content: center;
 	align-items: center;
-
 	background-color: rgba(255, 255, 255, 0.5);
 }
 

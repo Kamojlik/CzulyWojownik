@@ -123,6 +123,7 @@ a {
 
 .dropdown-menu li {
 	font: var(--font-style-1i);
+	margin-bottom: 15px;
 }
 
 .facebook-mobile-menu {
@@ -382,12 +383,12 @@ a {
 	display: none;
 }
 
-.price, .data {
+.price, .side-text {
 	font:var(--font-style-1f);
 	text-transform: uppercase;
 }
 
-.data::before {
+.side-text::before {
 	display: block;
 	height: 1px;
 	margin: 0px 24px 33px 24px;
@@ -431,6 +432,10 @@ a {
 	margin: 0px 30px 50px 30px;
 }
 
+.about-text p {
+	max-width: 1680px;
+}
+
 .reviews {
 	background-color: var(--turquoise);
 	color: var(--white);
@@ -441,6 +446,10 @@ a {
 	padding: 40px 20px 40px 20px;
 	flex-grow: 2;
 	min-width: 200px;
+}
+
+.reviews-max-width {
+	max-width: 2000px;
 }
 
 .footer-content {
@@ -521,8 +530,9 @@ a {
 
 @media (max-width: 399px) {
 	.sticky-top {
-		margin: 0px 0px 30px 0px;
-		justify-content: space-around;
+		justify-content: center;
+		gap: 20px;
+		margin: 10px;
 	}
 }
 
@@ -531,12 +541,15 @@ a {
 	padding: 0px;
 }
 
-.registration {
-	display: flex;
-	padding: 20px 0px 30px 0px;
-	align-items: center;
-	gap: 1em;
+@media (min-width: 1279px){
+	.registration {
+		display: flex;
+		padding: 20px 0px 30px 0px;
+		align-items: center;
+		gap: 1em;
+	}
 }
+
 
 .register-container::before {
 	content:'';
@@ -548,10 +561,15 @@ a {
 
 .workshop-container .section-content {
 	margin: 0px;
-	margin-top: 70px;
 	padding: 30px;
 }
 
+@media (min-width: 1279px) {
+
+	.workshop-container .section-content {
+		margin-top: 70px;
+	}
+}
 .workshop-description, .section-content p {
 	margin-bottom: 15px;
 }
@@ -736,7 +754,6 @@ a {
 	}
 
 	.registration {
-		flex-direction: row;
 		justify-content: space-evenly;
 	}
 
@@ -820,12 +837,12 @@ a {
 	color: white;
 }
 
-
 .events-container {
 	padding-bottom: 100px;
 	background-color: var(--light-gray);
 	text-align: center;
 }
+
 
 .location {
 	font: normal normal normal 20px/30px 'azo-sans-web';
@@ -856,9 +873,9 @@ a {
 	color: white;
 }
 
+@media (max-width: 899px){
 
-.dupa {
-	pointer-events: none;
+	.img-wrapper {
+		pointer-events: none;
+	}
 }
-
-
