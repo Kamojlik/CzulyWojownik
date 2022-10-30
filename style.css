@@ -23,6 +23,7 @@ abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,co
 
 /* colors */
 :root {
+	--basic: #F7F7F7;
 	--turquoise: rgb(34, 164, 186);
 	--orange: #FCBA00;
 	--gray: #D8D8D8; 
@@ -32,6 +33,7 @@ abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,co
 	--border-color-dark: #707070;
 	--red: #E5491F;
 }
+
 
 
 * {
@@ -46,9 +48,12 @@ html.menu-active {
 	overflow: hidden;
 }
 
-a {
+a, button {
 	color: inherit;
 }
+
+
+
 
 .menu-active .facebook-mobile-menu {
 	margin-top: 5px;margin-left: 60px;display: block;
@@ -112,7 +117,7 @@ a {
 .menu-active .dropdown-menu {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 15px;
 	margin-bottom: 40px;
 }
 
@@ -159,8 +164,6 @@ a {
 	right: 0;
 }
 
-
-
 .hero {
 	font: var(--font-style-1);
 	margin-left: 58px;
@@ -174,8 +177,8 @@ a {
 
 
 .intro {
-	margin: 11px 24px 47px 24px;
 	font: var(--font-style-2a);
+	margin: 11px 24px 60px 24px;
 } 
 
 .bacground-box-2 h4 {
@@ -195,7 +198,7 @@ a {
 
 .drawing img {
 	height: 135px;
-	margin-top: 62px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
@@ -213,7 +216,16 @@ a {
 }
 
 .background-box-4 {
-	background-color: var(--light-gray);
+	background-color: var(--basic);
+}
+
+@media(min-width: 1279px){
+	.background-box-4 {
+		background-image: url("assets/ksztalt_w_tle.png");
+		background-repeat: no-repeat;
+		background-position: right -80px top;
+	}
+
 }
 
 .background-box-4 .intro {
@@ -276,6 +288,10 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background-image: url("assets/kropki_w_tle_2.png"), url("assets/ksztalt_w_tle_mirror.png");
+    background-repeat: no-repeat;
+    background-position: top 45px right 15px, top left -130px;
+    background-color: var(--basic);
 }
 
 .reviews-line {
@@ -310,7 +326,7 @@ a {
 .section-title {
 	font: var(--font-style-1d);
 	text-transform: uppercase;
-	padding-top: 30px;;
+	padding-top: 70px;
 
 }
 
@@ -363,7 +379,8 @@ a {
 	border-radius: 24px;
 	width: 300px;
 	height: 69px;
-	margin-bottom: 
+	margin-bottom;:
+	margin: 40px; 
 }
 
 .btn-style1 {
@@ -439,10 +456,16 @@ a {
 	font: normal normal normal 18px/30px 'Azo-Sans-web';
 	border-radius: 24px;
 	text-align: left;
-	margin: 10px 20px 10px 20px;
+	margin-bottom: 25px;
 	padding: 40px 20px 40px 20px;
 	flex-grow: 2;
 	min-width: 200px;
+}
+
+@media (min-width: 799px) {
+	.reviews {
+		margin: 25px;
+	}
 }
 
 .reviews-max-width {
@@ -528,7 +551,7 @@ a {
 @media (max-width: 399px) {
 	.sticky-top {
 		justify-content: center;
-		margin: 10px;
+		margin: 25px;
 	}
 } 
 
@@ -547,13 +570,26 @@ a {
 }
 
 
-.register-container::before {
-	content:'';
-	display: block;        
-	height: 1px; 
-	background-color: black;
-	margin:20px 50px 20px 50px;
-} 
+@media(min-width: 1279px){
+	.register-container::before {
+		content:'';
+		display: block;        
+		height: 1px; 
+		background-color: black;
+		margin:20px 50px 20px 50px;
+	} 
+}
+
+@media(max-width: 1279px) {
+	.side-text::before {
+		content:'';
+		display: block;        
+		height: 1px; 
+		background-color: black;
+		margin:20px 50px 20px 50px;
+	}
+}
+
 
 .workshop-container .section-content {
 	margin: 0px;
@@ -751,6 +787,7 @@ a {
 
 	.registration {
 		justify-content: space-evenly;
+		text-align: left;
 	}
 
 	.hide-details-btn {
@@ -789,10 +826,6 @@ a {
 	.hide {
 		display: block;
 	}
-}
-
-.workshop-container {
-	background-color: var(--light-gray);	
 }
 
 .workshop-holder {
@@ -834,9 +867,9 @@ a {
 }
 
 .events-container {
-	padding-bottom: 100px;
-	background-color: var(--light-gray);
+	background-color: var(--basic);
 	text-align: center;
+	padding-bottom: 70px;
 }
 
 
