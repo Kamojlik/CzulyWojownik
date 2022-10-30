@@ -424,7 +424,7 @@ a, button{color:inherit;
 }
  
 .quote::before {
-	content: "â€";
+	content: "”";
 	font: var(--font-style-2a);
 	color: var(--red);
 	position: relative;
@@ -432,7 +432,7 @@ a, button{color:inherit;
 }
 
 .quote::after {
-	content: "â€";
+	content: "”";
 	font: var(--font-style-2a);
 	color: var(--red);
 	position: absolute;
