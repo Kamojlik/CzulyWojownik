@@ -53,7 +53,8 @@ a, button {
 }
 
 
-
+a, button{color:inherit;
+}
 
 .menu-active .facebook-mobile-menu {
 	margin-top: 5px;margin-left: 60px;display: block;
@@ -223,7 +224,7 @@ a, button {
 	.background-box-4 {
 		background-image: url("assets/ksztalt_w_tle.png");
 		background-repeat: no-repeat;
-		background-position: right -80px top;
+		background-position: right -40px top;
 	}
 
 }
@@ -292,6 +293,13 @@ a, button {
     background-repeat: no-repeat;
     background-position: top 45px right 15px, top left -130px;
     background-color: var(--basic);
+}
+
+@media(max-width: 599px){
+	.reviews-section {
+		background-image: url("assets/ksztalt_w_tle_mirror.png");
+		background-position: top left -130px;
+	}
 }
 
 .reviews-line {
@@ -379,8 +387,7 @@ a, button {
 	border-radius: 24px;
 	width: 300px;
 	height: 69px;
-	margin-bottom;:
-	margin: 40px; 
+	margin: 40px 0 40px 0;
 }
 
 .btn-style1 {
@@ -417,7 +424,7 @@ a, button {
 }
  
 .quote::before {
-	content: "”";
+	content: "â€";
 	font: var(--font-style-2a);
 	color: var(--red);
 	position: relative;
@@ -425,7 +432,7 @@ a, button {
 }
 
 .quote::after {
-	content: "”";
+	content: "â€";
 	font: var(--font-style-2a);
 	color: var(--red);
 	position: absolute;
@@ -460,6 +467,8 @@ a, button {
 	padding: 40px 20px 40px 20px;
 	flex-grow: 2;
 	min-width: 200px;
+	margin-right: 25px;
+	margin-left: 25px;
 }
 
 @media (min-width: 799px) {
@@ -737,7 +746,7 @@ a, button {
 	}
 
 	.gallery-preview-desktop a::after {
-		content:"Przejdź do galerii";
+		content:"PrzejdÅº do galerii";
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
