@@ -3,7 +3,7 @@ abbr,address,article,aside,audio,b,blockquote,body,button,canvas,caption,cite,co
 
 /* fonts */
 :root {
-	--font-style-basic: normal normal normal 16px/25px 'azo-sans-web'; 
+	--font-style-basic: normal normal normal 16px/30px 'azo-sans-web'; 
 	--font-style-1: normal normal bold 35px/44px 'azo-sans-web'; 
 	--font-style-1a: normal normal normal 18px/30px 'azo-sans-web'; 
 	--font-style-1b: normal normal bold 20px/40px 'azo-sans-web';
@@ -992,14 +992,6 @@ a, button {
 	left: -100vw;
 }
 
-@media (min-width: 1279px) {
-	.gallery-footer {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
-	}
-}
 
 .footer-container {
 	background-color: var(--black);
