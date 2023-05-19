@@ -22,42 +22,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // for each row in the sheet
 
-			let typeRozwojowy = document.querySelector('.rozwojowy');
-			let typeRelacje = document.querySelector('.relacje');
-			let typeInter = document.querySelector('.interpersonalny');
-			let typeMeskiKrag = document.querySelector('.meski-krag');
-			let template = document.querySelector('template');
-			
-			let container = document.querySelector('.container');
+			let typeRozwojowy = document.querySelector('.workshop-rozwojowy');
+			let typeRelacje = document.querySelector('.workshop-relacje');
+			let typeInter = document.querySelector('.workshop-interpersonalny');
+			let typeMeskiKrag = document.querySelector('.workshop-meski-krag');
+
+			let template = document.querySelector('.workshop-details-template');
 
 			data.forEach((row) => {
 				let copy;
 
 				if(row['Typ'] === 'Rozwojowy'){
-					copy = typeRozwojowy.content.cloneNode(true);		
+					copy = template.content.cloneNode(true);		
 				};
 
 				if(row['Typ'] === 'Relacje'){
-					copy = typeRelacje.content.cloneNode(true);		
+					copy = template.content.cloneNode(true);		
 				};
 
 				if(row['Typ'] === 'Interpersonalny'){
-					copy = typeInter.content.cloneNode(true);		
+					copy = template.content.cloneNode(true);		
 				};
 
 				if(row['Typ'] === 'Meski Krag'){
-					copy = typeMeskiKrag.content.cloneNode(true);		
+					copy = template.content.cloneNode(true);		
 				};
 
 				// add the data from JSON to the template
-				copy.querySelector('.workshop-title').textContent = row['Nazwa'];
 				copy.querySelector('.workshop-date').textContent = row['Data'];
 				copy.querySelector('.price').textContent = row['Cena'];
 				copy.querySelector('.workshop-link').href = row['Link'];
 			
 				// place the copy filled with data in the right place in HTML
-				container.appendChild(copy);
-				console.log(container);
+				if(row['Typ'] === 'Rozwojowy'){
+						typeRozwojowy.querySelector('.show-details-container').appendChild(copy);
+				};
+
+				if(row['Typ'] === 'Relacje'){
+					typeRelacje.querySelector('.show-details-container').appendChild(copy);
+				};
+
+				if(row['Typ'] === 'Interpersonalny'){
+					typeInter.querySelector('.show-details-container').appendChild(copy);
+				};
+
+				if(row['Typ'] === 'Meski Krag'){
+					typeMeskiKrag.querySelector('.show-details-container').appendChild(copy);
+				};
 			});
 		});
 });
